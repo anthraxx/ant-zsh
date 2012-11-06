@@ -30,4 +30,5 @@ typeset -ga precmd_functions
 typeset -ga chpwd_functions
 
 # dircolors
-eval `dircolors /etc/dircolors/dircolors.256dark`
+eval `dircolors /usr/share/dircolors/dircolors.256dark`
+
