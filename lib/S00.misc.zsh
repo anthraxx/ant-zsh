@@ -30,5 +30,13 @@ typeset -ga precmd_functions
 typeset -ga chpwd_functions
 
 # dircolors
-eval `dircolors /usr/share/dircolors/dircolors.256dark`
+if [[ -z "$ZSH_DIRCOLORS_DIR" ]]; then
+	ZSH_DIRCOLORS_DIR="/usr/share/dircolors"
+fi
+if [[ -z "$ZSH_DIRCOLORS" ]]; then
+	ZSH_DIRCOLORS="dircolors.256dark"
+fi
+if [[ -f "$ZSH_DIRCOLORS_DIR/$ZSH_DIRCOLORS" ]]; then
+	eval `dircolors $ZSH_DIRCOLORS_DIR/$ZSH_DIRCOLORS`
+fi
 
