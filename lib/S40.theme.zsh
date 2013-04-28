@@ -6,7 +6,6 @@ setopt no_beep
 setopt auto_cd
 setopt multios
 setopt cdablevarS
-setopt promptsubst         # Setup the prompt with pretty colors
 
 if [[ x$WINDOW != x ]]
 then
@@ -24,3 +23,4 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=")"             # At the very end of the prompt
 ZSH_THEME_GIT_PROMPT_DIRTY="*"              # Text to display if the branch is dirty
 ZSH_THEME_GIT_PROMPT_CLEAN=""               # Text to display if the branch is clean
 
+setopt prompt_subst         # Setup the prompt with pretty colors

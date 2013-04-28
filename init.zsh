@@ -19,3 +19,21 @@ if [ ! -f "${ZSH}/theme/${ZSH_THEME}.zsh" ]; then
 fi
 source "${ZSH}/theme/${ZSH_THEME}.zsh"
 
+# antigen
+ADOTDIR="${ZSH}/plugin"
+source "${ZSH}/plugin/antigen/antigen.zsh"
+
+antigen bundles <<EOBUNDLES
+	zsh-users/zsh-syntax-highlighting
+	zsh-users/zsh-completions src
+	zsh-users/zaw
+	git
+	gitfast
+	git-extras
+	git-flow
+	taskwarrior
+	colored-man
+	extract
+EOBUNDLES
+
+antigen apply
