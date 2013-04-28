@@ -1,0 +1,6 @@
+# set the zsh theme
+ZSH_THEME=anthraxx
+
+# source the init script that loads everything
+source $ZSH/ant-zsh.zsh
+
