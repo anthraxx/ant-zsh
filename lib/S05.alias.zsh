@@ -4,7 +4,7 @@ alias po='popd'
 alias dl='dirs -v | head -n10'
 
 # Show history
-alias history='fc -l'
+alias history='fc -l 1'
 
 # List direcory contents
 alias ls='ls --color=auto'

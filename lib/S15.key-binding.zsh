@@ -2,7 +2,10 @@ setopt vi
 bindkey -v
 bindkey '\ew' kill-region
 bindkey -s '\el' "ls\n"
-bindkey '^r' history-incremental-search-backward
+bindkey '^E' history-incremental-search-backward
+
+# zaw bindings
+bindkey '^R' zaw-history
 
 # make search up and down work, so partially type and hit up/down to find relevant stuff
 bindkey '^[[A' up-line-or-search
