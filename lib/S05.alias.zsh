@@ -8,7 +8,13 @@ alias history='fc -l 1'
 
 # List direcory contents
 alias ls='ls --color=auto'
-alias l='ls -lah --color'
+if [ -n "`which ls++`" ]; then
+	alias l='ls++ --potsf -lAh --color'
+	alias ll='ls++ --potsf -lAh --color'
+else
+	alias l='ls -lAh --color'
+	alias ll='ls -lAh --color'
+fi
 
 # grep
 alias grep='grep --color=auto'
