@@ -37,8 +37,3 @@ cd () {
     builtin cd "$@"
   fi
 }
-
-# mkdir & cd to it
-function mkdircd() { 
-  mkdir -p "$1" && cd "$1"; 
-}
