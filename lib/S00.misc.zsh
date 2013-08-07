@@ -18,11 +18,14 @@ setopt prompt_subst         # expansions-in-prompt
 export PAGER="less -R"
 export LC_CTYPE=$LANG
 
-# vars
-export TERM=xterm-256color
-export BROWSER=firefox
-export EDITOR=vim
-export VISUAL=$EDITOR
+# default env vars (if not set)
+if [[ -z "$TERM" ]]; then
+	export TERM=xterm-256color
+fi
+if [[ -z "$EDITOR" ]]; then
+	export EDITOR=vim
+	export VISUAL=$EDITOR
+fi
 
 # pre execute functions
 typeset -ga preexec_functions
