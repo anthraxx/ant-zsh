@@ -10,3 +10,9 @@ function take() {
 function mkdircd() {
   take "$1"
 }
+
+function zc () {
+  for exp in $argv; do
+    print "$exp = $(( exp ))";
+  done
+}
