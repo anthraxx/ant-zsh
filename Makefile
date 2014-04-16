@@ -63,3 +63,7 @@ submodule:
 	@git submodule init
 	@git submodule update
 	@echo "$(BOLD)$(GREEN)[+] $(RST)$(BOLD)initialized submodules$(RST)"
+
+update: submodule
+	git pull --rebase
+	zsh -c "source ant-zsh.zsh && antigen update"
