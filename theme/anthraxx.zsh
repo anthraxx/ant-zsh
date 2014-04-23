@@ -2,8 +2,11 @@ autoload -Uz vcs_info
 
 PR_GIT_UPDATE=1
 PR_PROMPT_COLUMNS=
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%}[git%{$fg[red]%}/%{$fg[yellow]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[red]%}]"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%}[%{$fg[yellow]%}${reset_color}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[red]%}]${reset_color}"
+ZSH_THEME_GIT_PROMPT_SEPARATOR="%{$fg[red]%}|${reset_color}"
+ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[blue]%}"
+update_current_git_vars
 
 prompt_anthraxx_setup () {
 	local -a pcc
@@ -31,7 +34,7 @@ prompt_anthraxx_setup () {
 	[[ -n "$WINDOW" ]] && p_win="$pc['\(']%F{$pcc[4]}$WINDOW$pc['\)']"
 
 	p_userpwd="$pc['\[']%F{$pcc[3]}%n%F{$pcc[1]}@%F{$pcc[3]}%m$p_win%F{$pcc[5]}:%F{$pcc[4]}%~$pc['\]']"
-	p_vcs='$(git_prompt_info)'
+	p_vcs='$(git_super_status)'
 
 	p_shlvlhist="$pc['\[']%F{$pcc[2]}zsh%(2L./$SHLVL.)$pc['\]']$pc['\[']%F{$pcc[4]}%h%b$pc['\]']"
 	p_rc="%(?..[%F{$pcc[2]}%?%1v$pc['\]'])"
@@ -78,7 +81,7 @@ prompt_anthraxx_precmd () {
 
 prompt_anthraxx_preexec() {
 	case $(history $HISTCMD) in
-		*git*)
+		git*|hub*|gh*|stg*)
 			PR_GIT_UPDATE=1
 			;;
 	esac
