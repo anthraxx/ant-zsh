@@ -5,7 +5,7 @@ PR_PROMPT_COLUMNS=
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%}[%{$fg[yellow]%}%{${reset_color}%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[red]%}]%{${reset_color}%}"
 ZSH_THEME_GIT_PROMPT_SEPARATOR="%{$fg[red]%}|%{${reset_color}%}"
-ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[blue]%}%{${reset_color}%}"
+ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[blue]%}"
 update_current_git_vars
 
 prompt_anthraxx_setup () {
