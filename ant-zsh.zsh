@@ -1,13 +1,15 @@
 # some pre-checks
 if [ "" = "$ZSH" ]; then
 	echo "\033[00;31mERROR: missing ZSH env var! read the README!"
+	return
 fi
 if [ ! -d "$ZSH" ]; then
 	echo "\033[00;31mERROR: ZSH env var leads nowhere: '$ZSH'"
-else
-	# include all lib config files
-	for config_file ($ZSH/lib/*.zsh) source $config_file
+	return
 fi
+
+# include all lib config files
+for config_file ($ZSH/lib/*.zsh) source $config_file
 
 # include defined theme or default fallback
 if [ "$ZSH_THEME" = ""  ]; then
