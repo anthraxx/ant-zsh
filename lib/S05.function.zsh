@@ -16,3 +16,11 @@ function zc () {
     print "$exp = $(( exp ))";
   done
 }
+
+function zsh_update() {
+	pushd ${ZSH}
+	git pull --rebase
+	git submodule update
+	antigen update
+	popd
+}
