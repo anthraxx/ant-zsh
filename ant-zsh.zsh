@@ -18,8 +18,6 @@ antigen bundles <<EOBUNDLES
 	zsh-users/zsh-completions src
 	zsh-users/zaw
 	git
-	gitfast
-	git-extras
 	git-flow
 	taskwarrior
 	colored-man
