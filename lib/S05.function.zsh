@@ -19,8 +19,8 @@ function zc () {
 
 function zsh_update() {
 	pushd ${ZSH}
-	git pull --rebase
-	git submodule update
+	git pull --rebase origin master
+	git submodule update --init --recursive --rebase
 	antigen update
 	popd
 }

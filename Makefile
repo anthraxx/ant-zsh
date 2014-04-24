@@ -60,10 +60,12 @@ install-zshenv:
 	@echo "$(BOLD)$(GREEN)[+] $(RST)$(BOLD)installed default $(HOME)/.zshenv$(RST)"
 
 submodule: 
-	@git submodule init
-	@git submodule update
+	@git submodule update --recursive --init --rebase
 	@echo "$(BOLD)$(GREEN)[+] $(RST)$(BOLD)initialized submodules$(RST)"
 
 update: submodule
-	git pull --rebase
-	zsh -c "source ant-zsh.zsh && antigen update"
+	zsh -c "source ant-zsh.zsh && zsh_update"
+
+update-antigen:
+	@echo "$(BOLD)$(GREEN)[+] $(RST)$(BOLD)updating antigen from remote...$(RST)"
+	@git submodule update --recursive --init --rebase --remote plugin/antigen
