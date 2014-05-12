@@ -1,6 +1,11 @@
 autoload colors; colors;
 
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
+# export LS_COLORS via dircolors for compretion
+if [ -z "$LS_COLORS" ]
+then
+	export $(dircolors)
+fi
 
 # Enable ls colors
 if [ "$DISABLE_LS_COLORS" != "true" ]
@@ -11,7 +16,7 @@ fi
 
 # set some colors
 for COLOR in RED GREEN BLUE YELLOW WHITE BLACK CYAN; do
-    eval PR_$COLOR='%{$fg[${(L)COLOR}]%}'
+	eval PR_$COLOR='%{$fg[${(L)COLOR}]%}'
     eval PR_BRIGHT_$COLOR='%{$fg_bold[${(L)COLOR}]%}'
 done
 PR_RST="%{${reset_color}%}"
