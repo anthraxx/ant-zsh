@@ -4,7 +4,7 @@ export LSCOLORS="Gxfxcxdxbxegedabagacad"
 # export LS_COLORS via dircolors for compretion
 if [ -z "$LS_COLORS" ]
 then
-	export $(dircolors)
+	eval `dircolors`
 fi
 
 # Enable ls colors
