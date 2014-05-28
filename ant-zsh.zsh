@@ -31,7 +31,7 @@ antigen apply
 for config_file ($ZSH/lib/*.zsh) source $config_file
 
 # fallback theme
-if [ "$ZSH_THEME" = ""  ]; then
+if [ -z "$ZSH_THEME" ]; then
 	ZSH_THEME=anthraxx
 fi
 # include defined theme
