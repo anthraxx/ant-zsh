@@ -22,6 +22,7 @@ antigen bundles <<EOBUNDLES
 	taskwarrior
 	colored-man
 	extract
+	python
 EOBUNDLES
 antigen apply
 
