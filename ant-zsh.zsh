@@ -23,6 +23,7 @@ antigen bundles <<EOBUNDLES
 	colored-man
 	extract
 	python
+	vi-mode
 EOBUNDLES
 antigen apply
 
