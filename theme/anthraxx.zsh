@@ -1,4 +1,5 @@
 autoload -Uz vcs_info
+setopt transientrprompt
 
 PR_GIT_UPDATE=1
 PR_PROMPT_COLUMNS=
