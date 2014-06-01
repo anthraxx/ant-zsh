@@ -50,14 +50,14 @@ prompt_anthraxx_setup () {
 	local p_first_end="]"
 	local prompt_line_width=${#${(S%%)p_first//(\%([KF1]|)\{*\}|\%[Bbkf])}}
 	local prompt_line_end_width=${#${(S%%)p_first_end//(\%([KF1]|)\{*\}|\%[Bbkf])}}
-	local prompt_padding_size=$(( COLUMNS - prompt_line_width - prompt_line_end_width ))
+	local prompt_padding_size=$(( COLUMNS - prompt_line_width - prompt_line_end_width - 1 ))
 	if (( prompt_padding_size > 0 )); then
 		local prompt_padding
 		eval "prompt_padding=\${(l:${prompt_padding_size}::=:)_empty_zz}"
 		p_first="$p_first$prompt_padding$p_first_end"
 	fi
 
-	prompt="$p_first$p_userpwd$N$p_shlvlhist$p_rc$p_vcs$p_end"
+	prompt="$p_first$N$p_userpwd$N$p_shlvlhist$p_rc$p_vcs$p_end"
 	PS2='%(4_.\.)%3_> %E'
 }
 
