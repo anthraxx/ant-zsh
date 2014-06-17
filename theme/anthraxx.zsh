@@ -12,6 +12,7 @@ update_current_git_vars
 N=$'%1(l.\n.)'
 MODE_INDICATOR="%{$fg_bold[yellow]%}vi %{$fg[red]%}<%{$reset_color%}"
 RPS1='$(vi_mode_prompt_info)'
+VIRTUALENV_INDICATOR='$(virtualenv_prompt_info)'
 
 prompt_anthraxx_setup () {
 	local -a pcc
@@ -57,7 +58,7 @@ prompt_anthraxx_setup () {
 		p_first="$p_first$prompt_padding$p_first_end"
 	fi
 
-	prompt="$p_first$N$p_userpwd$N$p_shlvlhist$p_rc$p_vcs$p_end"
+	prompt="$p_first$N$p_userpwd$N$p_shlvlhist$p_rc${VIRTUALENV_INDICATOR}$p_vcs$p_end"
 	PS2='%(4_.\.)%3_> %E'
 }
 
