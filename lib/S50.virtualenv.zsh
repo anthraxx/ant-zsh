@@ -7,7 +7,7 @@ fi
 # disables prompt mangling in virtual_env/bin/activate
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-# virtualenv prompt
+# virtualenv prompt theme options
 ZSH_THEME_VIRTUALENV_PROMPT_PREFIX="%{${reset_color}%}%{$fg[red]%}[%{${reset_color}%}"
 ZSH_THEME_VIRTUALENV_PROMPT_SUFFIX="%{${reset_color}%}%{$fg[red]%}]%{${reset_color}%}"
 ZSH_THEME_VIRTUALENV_PROMPT_ENVNAME="%{${reset_color}%}%{$fg_bold[yellow]%}"
