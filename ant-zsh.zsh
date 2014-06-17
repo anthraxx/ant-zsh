@@ -1,5 +1,5 @@
 # some pre-checks
-if [ "" = "$ZSH" ]; then
+if [ -z "$ZSH" ]; then
 	echo "\033[00;31mERROR: missing ZSH env var! read the README!"
 	return
 fi
