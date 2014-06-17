@@ -12,6 +12,31 @@ fi
 ADOTDIR="${ZSH}/plugin"
 source "${ZSH}/plugin/antigen/antigen.zsh"
 
+plugins=(cowfortune virtualenv ccache)
+
+# Add all defined plugins to fpath. This must be done
+# before running compinit.
+is_plugin() {
+  local base_dir=$1
+  local name=$2
+  test -f $base_dir/plugin/$name/$name.plugin.zsh \
+    || test -f $base_dir/plugin/$name/_$name
+}
+for plugin ($plugins); do
+  print $plugin
+  if is_plugin $ZSH $plugin; then
+    fpath=($ZSH/plugin/$plugin $fpath)
+  fi
+done
+# Load all of the plugins that were defined in ~/.zshrc
+for plugin ($plugins); do
+  if [ -f $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh ]; then
+    source $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh
+  elif [ -f $ZSH/plugin/$plugin/$plugin.plugin.zsh ]; then
+    source $ZSH/plugin/$plugin/$plugin.plugin.zsh
+  fi
+done
+
 antigen bundles <<EOBUNDLES
 	olivierverdier/zsh-git-prompt
 	zsh-users/zsh-syntax-highlighting
