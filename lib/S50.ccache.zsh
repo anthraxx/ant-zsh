@@ -1,5 +1,5 @@
 # check if ccache module is disabled
-if [ "$ZSH_CCACHE" = 0 ]; then return; fi
+if [ "$ZSH_CCACHE_DISABLE" = "1" ]; then return; fi
 
 # check if ccache already in PATH
 case $PATH in */usr/lib/ccache/bin* ) return;; esac
