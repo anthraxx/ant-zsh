@@ -1,11 +1,11 @@
+# disables prompt mangling in virtual_env/bin/activate
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
 # source virtualenvwrapper.sh if it exists
 ZSH_VIRTUALENV_WRAPPER=$(which virtualenvwrapper.sh 2>/dev/null)
 if [ 0 -eq $? ]; then
 	source ${ZSH_VIRTUALENV_WRAPPER}
 fi
-
-# disables prompt mangling in virtual_env/bin/activate
-export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # virtualenv prompt theme options
 ZSH_THEME_VIRTUALENV_PROMPT_PREFIX="%{${reset_color}%}%{$fg[red]%}[%{${reset_color}%}"
