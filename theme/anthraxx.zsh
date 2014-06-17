@@ -3,10 +3,10 @@ setopt transientrprompt
 
 PR_GIT_UPDATE=1
 PR_PROMPT_COLUMNS=
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%}[%{$fg[yellow]%}%{${reset_color}%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[red]%}]%{${reset_color}%}"
-ZSH_THEME_GIT_PROMPT_SEPARATOR="%{$fg[red]%}|%{${reset_color}%}"
-ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[blue]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{${reset_color}%}%{$fg[red]%}[%{${reset_color}%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{${reset_color}%}%{$fg[red]%}]%{${reset_color}%}"
+ZSH_THEME_GIT_PROMPT_SEPARATOR="%{${reset_color}%}%{$fg[red]%}|%{${reset_color}%}"
+ZSH_THEME_GIT_PROMPT_BRANCH="%{${reset_color}%}%{$fg_bold[blue]%}"
 update_current_git_vars
 
 N=$'%1(l.\n.)'
