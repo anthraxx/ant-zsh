@@ -22,7 +22,7 @@ source "${ZSH}/plugin/antigen/antigen.zsh"
 antigen bundles <<EOBUNDLES
 	olivierverdier/zsh-git-prompt
 	zsh-users/zsh-syntax-highlighting
-	zsh-users/zsh-completions src
+	zsh-users/zsh-completions
 	zsh-users/zaw
 	git
 	git-flow
