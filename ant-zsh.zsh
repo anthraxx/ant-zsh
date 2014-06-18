@@ -11,18 +11,20 @@ fi
 # include all lib config files
 for config_file ($ZSH/lib/*.zsh) source $config_file
 
-# define and load the plugins
-plugins=(cowfortune virtualenv ccache)
-load_plugin $plugins
-
-# antigen
+# load antigen
 ADOTDIR="${ZSH}/plugin"
 source "${ZSH}/plugin/antigen/antigen.zsh"
+
+# define and load the plugins
+if [ "$ZSH_DEFAULT_PLUGINS_DISABLE" != "1" ]; then
+	default_plugins=(cowfortune virtualenv ccache)
+fi
+load_plugin $plugins $default_plugins
 
 antigen bundles <<EOBUNDLES
 	olivierverdier/zsh-git-prompt
 	zsh-users/zsh-syntax-highlighting
-	zsh-users/zsh-completions
+	zsh-users/zsh-completions src
 	zsh-users/zaw
 	git
 	git-flow
