@@ -22,5 +22,5 @@ function zsh_update() {
 	git pull --rebase origin master
 	git submodule update --init --recursive --rebase
 	antigen update
-	popd
+	popd 2>/dev/null
 }
