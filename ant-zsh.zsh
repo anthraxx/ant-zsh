@@ -19,7 +19,7 @@ source "${ZSH}/plugin/antigen/antigen.zsh"
 if [ "$ZSH_DEFAULT_PLUGINS_DISABLE" != "1" ]; then
 	default_plugins=(cowfortune virtualenv ccache)
 fi
-load_plugin $plugins $default_plugins
+load_plugin $default_plugins $plugins
 
 antigen bundles <<EOBUNDLES
 	olivierverdier/zsh-git-prompt
