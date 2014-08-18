@@ -26,6 +26,7 @@ antigen bundles <<EOBUNDLES
 	zsh-users/zsh-syntax-highlighting
 	zsh-users/zsh-completions src
 	zsh-users/zaw
+	mfaerevaag/wd
 	git
 	git-flow
 	taskwarrior
