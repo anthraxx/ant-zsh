@@ -64,7 +64,7 @@ submodule:
 	@echo "$(BOLD)$(GREEN)[+] $(RST)$(BOLD)initialized submodules$(RST)"
 
 update: submodule
-	zsh -c "source ant-zsh.zsh && zsh_update"
+	zsh -c "source ant-zsh.zsh && zsh_update" || true
 
 update-antigen:
 	@echo "$(BOLD)$(GREEN)[+] $(RST)$(BOLD)updating antigen from remote...$(RST)"
