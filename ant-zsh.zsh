@@ -36,9 +36,6 @@ antigen bundles <<EOBUNDLES
 EOBUNDLES
 antigen apply
 
-# load gitstatus fix after zsh-git-prompt
-load_plugin git-antzsh
-
 # fallback theme
 if [ -z "$ZSH_THEME" ]; then
 	ZSH_THEME=anthraxx
