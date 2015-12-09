@@ -29,7 +29,7 @@ antigen bundles <<EOBUNDLES
 	git
 	git-flow
 	taskwarrior
-	colored-man
+	colored-man-pages
 	extract
 	python
 	vi-mode
