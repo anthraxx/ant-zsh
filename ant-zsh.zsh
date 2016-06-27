@@ -23,9 +23,9 @@ load_plugin $default_plugins $plugins
 
 antigen bundles <<EOBUNDLES
 	olivierverdier/zsh-git-prompt
-	zsh-users/zsh-syntax-highlighting
 	zsh-users/zsh-completions src
 	zsh-users/zaw
+	zsh-users/zsh-syntax-highlighting
 	git
 	git-flow
 	taskwarrior
