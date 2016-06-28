@@ -36,6 +36,9 @@ antigen bundles <<EOBUNDLES
 EOBUNDLES
 antigen apply
 
+# post plugin setup
+source "${ZSH}/lib/S99.post-plugin.zsh"
+
 # fallback theme
 if [ -z "$ZSH_THEME" ]; then
 	ZSH_THEME=anthraxx

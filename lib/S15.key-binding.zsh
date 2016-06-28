@@ -44,4 +44,3 @@ bindkey "\eOF" end-of-line
 bindkey "\eOF" end-of-line
 bindkey "\eOH" beginning-of-line
 bindkey "\e[3~" delete-char # Del
-
