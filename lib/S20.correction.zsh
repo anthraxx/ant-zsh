@@ -3,7 +3,7 @@ setopt correct_all          # correct args
 setopt no_correct_all       # don't coorect args
 setopt auto_list            # list choice on ambiguous command
 
-alias man='nocorrect man'
+# alias man='nocorrect man' # avoid alias man because of colored man function
 alias mv='nocorrect mv'
 alias mkdir='nocorrect mkdir'
 alias ebuild='nocorrect ebuild'
