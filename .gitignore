@@ -1,3 +1,6 @@
 /cache
 /plugin/repos/
+/plugin/bundles/
 /plugin/revert-info
+/plugin/.zcompdump*
+/plugin/*.log
