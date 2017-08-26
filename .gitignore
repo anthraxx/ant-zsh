@@ -4,3 +4,5 @@
 /plugin/revert-info
 /plugin/.zcompdump*
 /plugin/*.log
+plugin/.resources
+plugin/init.zsh*
