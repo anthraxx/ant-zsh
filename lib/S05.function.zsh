@@ -21,6 +21,7 @@ function zsh_update() {
 	pushd ${ZSH}
 	git pull --rebase origin master
 	git submodule update --init --recursive --rebase
+	antigen reset
 	antigen update
 	popd 2>/dev/null
 }
