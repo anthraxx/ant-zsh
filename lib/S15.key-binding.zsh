@@ -5,6 +5,7 @@ bindkey -s '\el' "ls\n"
 bindkey '^E' history-incremental-search-backward
 
 # zaw bindings
+bindkey '^W' zaw-bookmark
 bindkey '^R' zaw-history
 
 # make search up and down work, so partially type and hit up/down to find relevant stuff
