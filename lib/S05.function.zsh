@@ -17,6 +17,10 @@ function zc () {
   done
 }
 
+function psgrep() {
+  grep "$1" =(ps aux)
+}
+
 function zsh_update() {
 	pushd "${ZSH}"
 	git pull --rebase origin master
