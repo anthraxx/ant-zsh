@@ -21,6 +21,11 @@ function psgrep() {
   grep "$1" =(ps aux)
 }
 
+function run-with-sudo() {
+  LBUFFER="sudo $LBUFFER"
+}
+zle -N run-with-sudo
+
 function zsh_update() {
 	pushd "${ZSH}"
 	git pull --rebase origin master

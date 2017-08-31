@@ -4,6 +4,9 @@ bindkey '\ew' kill-region
 bindkey -s '\el' "ls\n"
 bindkey '^E' history-incremental-search-backward
 
+# bind internal functions
+bindkey '^Xs' run-with-sudo
+
 # zaw bindings
 bindkey '^W' zaw-bookmark
 bindkey '^R' zaw-history
