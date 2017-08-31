@@ -11,7 +11,7 @@ WORDCHARS=''
 zmodload -i zsh/complist
 
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ${ZSH}/cache
+zstyle ':completion:*' cache-path "${ZSH}/cache"
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
 zstyle ':completion:*' matcher-list '+m:{a-z}={A-Z} r:|[._-]=** r:|=**' '' '' '+m:{a-z}={A-Z} r:|[._-]=** r:|=**'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
