@@ -1,1 +1,1 @@
-export GREP_COLOR='00;31;5;226'
+export GREP_COLOR='7;33'
