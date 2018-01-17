@@ -6,3 +6,4 @@
 /plugin/*.log
 plugin/.resources
 plugin/init.zsh*
+*.zwc
