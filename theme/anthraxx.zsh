@@ -48,13 +48,13 @@ prompt_anthraxx_setup () {
 
 	zle_highlight[(r)default:*]=default:$pcc[2]
 	p_first="$p_date$p_tty$p_plat"
-	local p_first_end="]"
+	local p_first_end=""
 	local prompt_line_width=${#${(S%%)p_first//(\%([KF1]|)\{*\}|\%[Bbkf])}}
 	local prompt_line_end_width=${#${(S%%)p_first_end//(\%([KF1]|)\{*\}|\%[Bbkf])}}
-	local prompt_padding_size=$(( COLUMNS - prompt_line_width - prompt_line_end_width - 1 ))
+	local prompt_padding_size=$(( COLUMNS - prompt_line_width - prompt_line_end_width ))
 	if (( prompt_padding_size > 0 )); then
 		local prompt_padding
-		eval "prompt_padding=\${(l:${prompt_padding_size}::=:)_empty_zz}"
+		eval "prompt_padding=\${(l:${prompt_padding_size}::─:)_empty_zz}"
 		p_first="$p_first$prompt_padding$p_first_end"
 	fi
 
