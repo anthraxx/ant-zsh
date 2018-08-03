@@ -7,11 +7,34 @@ then
 	eval $(dircolors)
 fi
 
-# Enable ls colors
+# enable ls colors
 if [ "$DISABLE_LS_COLORS" != "true" ]
 then
   # Find the option for using colors in ls, depending on the version: Linux or BSD
   ls --color -d . &>/dev/null 2>&1 && alias ls='ls --color=tty' || alias ls='ls -G'
+fi
+
+# enable ip colors
+if [ "$DISABLE_IP_COLORS" != "true" ]
+then
+  ip --color -br link &>/dev/null 2>&1 && alias ip='ip --color -br'
+fi
+
+# enable diff colors
+if [ "$DISABLE_DIFF_COLORS" != "true" ]
+then
+  diff --color=auto --version &>/dev/null 2>&1 && alias diff='diff --color=auto'
+fi
+
+# enable ncdu colors
+if [ "$DISABLE_NCDU_COLORS" != "true" ]
+then
+  ncdu --color=dark -version &>/dev/null 2>&1 && alias ncdu='ncdu --color=dark'
+fi
+
+if [ "$DISABLE_S_COLORS" != "true" ]
+then
+	export S_COLORS=auto
 fi
 
 # set some colors
